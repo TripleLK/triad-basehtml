@@ -17,20 +17,20 @@
 
 /* Navigation Bar */
 .nav-bar {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff3ef;
   align-self: center;
   display: flex;
   width: 100%;
-  padding: 40px 80px;
+  padding: 10px 20px;
   font-family:
     "Advent Pro",
     -apple-system,
     Roboto,
     Helvetica,
     sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   color: #2b2610;
   font-weight: 500;
   white-space: nowrap;
@@ -38,18 +38,23 @@
   flex-wrap: wrap;
 }
 
+.nav-bar-items {
+  display: flex;
+  gap: 20px;
+}
+
 .products,
 .contact {
   align-self: stretch;
   margin: auto 0;
-  width: 223px;
+  /* width: 223px; */
 }
 
 .logo-image {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 48px;
+  width: 10vw;
   align-self: stretch;
   margin: auto 0;
   flex-shrink: 0;
@@ -133,8 +138,13 @@
 }
 
 .search-view {
+  border: 3px solid var(--Text-Color, #2B2610);
   border-radius: 20px;
-  width: 718px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
   max-width: 100%;
 }
 
@@ -197,7 +207,6 @@
 .content {
   align-self: stretch;
   display: flex;
-  min-width: 240px;
   margin: auto 0;
   flex-direction: column;
   align-items: start;
@@ -222,6 +231,7 @@
 .input-text {
   align-self: stretch;
   min-height: 24px;
+  font-size: 16px;
   gap: 1px;
 }
 
@@ -263,6 +273,8 @@
   align-items: center;
   gap: 10px;
   justify-content: center;
+  background-color: #2b2610;
+  border-radius: 40px;
 }
 
 .search-button-icon {
@@ -512,9 +524,8 @@
 
 .product-title {
   align-self: stretch;
-  width: 200px;
   max-width: 100%;
-  padding: 30px 20px 20px;
+  padding: 20px 20px;
   gap: 10px;
   font-family:
     "Advent Pro",
@@ -535,27 +546,30 @@
   width: 100%;
   padding: 0 20px;
   gap: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
 
 .read-more-button {
   align-self: start;
-  padding: 20px 20px 40px;
-  font-size: var(--sds-typography-body-size-medium);
-  color: var(--sds-color-text-brand-on-brand);
-  font-weight: var(--sds-typography-body-font-weight-regular);
+  padding: 20px 20px;
   line-height: 1;
 }
 
-.button {
+button {
   align-self: stretch;
   border-radius: 20px;
   background-color: #2b2610;
-  gap: var(--sds-size-space-200);
+  padding: 10px;
   overflow: hidden;
-  padding: var(--sds-size-space-300);
+  font-size: 16px;
+  font-family:
+    "Advent Pro",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   color: white;
   border: none;
   cursor: pointer;
@@ -569,6 +583,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  padding-bottom: 40px;
 }
 
 .search-bar-2 {
@@ -788,6 +803,7 @@
 .read-more-details {
   align-self: stretch;
   margin: auto 0;
+  font-weight: 400;
 }
 
 .expand-icon {
@@ -828,18 +844,15 @@
 
 .model-header {
   display: flex;
-  width: 352px;
   max-width: 100%;
-  padding-right: 53px;
   align-items: stretch;
-  gap: 33px;
+  gap: 20px;
   color: #2b2610;
 }
 
 .model-name {
   font-size: 24px;
   font-weight: 400;
-  flex-grow: 1;
 }
 
 .quote-button {
@@ -892,6 +905,7 @@
 .specification {
   align-self: stretch;
   margin: auto 0;
+  font-weight: 400;
 }
 
 /* Contact Us Page */
@@ -1014,22 +1028,31 @@
 }
 
 .main {
-  align-items: start;
+  align-items: center;
   background-color: #fff3ef;
   display: flex;
   width: 100%;
   padding: 60px 80px;
   gap: 40px 114px;
   justify-content: start;
+  flex-direction: row;
 }
 
 .footer-container {
   display: flex;
-  min-width: 240px;
-  width: 310px;
   flex-direction: column;
   align-items: stretch;
   justify-content: start;
+}
+
+.footer-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20vw;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
 }
 
 .address {
@@ -1071,11 +1094,17 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 500px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
 /* Media Queries */
 @media (max-width: 991px) {
   .nav-bar {
     max-width: 100%;
-    padding: 40px 20px;
+    padding: 10px 20px;
     white-space: initial;
   }
 
